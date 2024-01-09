@@ -23,17 +23,17 @@
         <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
             <section role="region" aria-labelledby="student-info">
                 <h2 id="student-info">Student Info</h2>
-                <div>
+                <div class="info">
                     <label for="student-name">Name:</label>
-                    <input id="student-name" type="text" name="name">
+                    <input id="student-name" type="text" name="student-name">
                 </div>
-                <div>
+                <div class="info">
                     <label for="student-email">Email:</label>
-                    <input id="student-emal" type="text" name="email">
+                    <input id="student-emal" type="text" name="student-email">
                 </div>
-                <div>
-                    <label for="student-birthdate">D.O.B.:<span class="sr-only">(Date of Birth)</span></label>
-                    <input id="student-birthdate" type="text" name="birthdate">
+                <div class="info">
+                    <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+                    <input id="birth-date" type="date" name="birth-date">
                 </div>
             </section>
             <section role="region" aria-labelledby="html-questions">
@@ -65,15 +65,32 @@
             <section role="region" aria-labelledby="css-questions">
                 <h2 id="css-questions">CSS Questions</h2>
                 <div class="question-block">
-                    <label for="">Are you a frontend developer?</label>
+                    <label for="customer">Are you a frontend developer?</label>
                 </div>
-                <div class="answer"></div>
+                <div class="answer">
+                    <select name="customer" id="customer" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
                 <div class="question-block">
-                    <label for="">Do you have any questions:</label>
+                    <label for="textbox">Do you have any questions:</label>
                 </div>
-                <div class="answer"></div>
+                <div class="answer">
+                    <textarea name="textbox" id="textbox" cols="24" rows="5" placeholder="Who is flexbox..."></textarea>
+                </div>
             </section>
+            <input type="submit" value="Send">
         </form>
     </main>
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br>
+            San Francisco<br>
+            California<br>
+            USA
+        </address>
+    </footer>
 </body> 
 </html>

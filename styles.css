@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
     background-color: #F5F6F7;
     color: #1B1B32;
@@ -119,8 +125,49 @@ input {
     text-align: left;
 }
 
+p {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
 p::before {
     content: "Question #";
+}
+
+.question {
+    border: none;
+    padding-bottom: 0;
+}
+
+.answers-list {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    display: block;
+    width: 40%;
+    margin: 40px auto;
+    padding: 15px;
+    background: #D0D0D5;
+    border: 3px solid #3b3b4f;
+    font-size: 23px;
+}
+
+footer {
+    background-color: #2A2A40;
+    display: flex;
+    justify-content: center;
+}
+
+footer, footer a {
+    color: #DFDFE2;
+}
+
+address {
+    text-align: center;
+    padding: 0.3em;
 }
 
 .sr-only {
